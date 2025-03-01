@@ -1,3 +1,21 @@
+# yt-dlp
+- https://github.com/yt-dlp/yt-dlp/wiki/Installation
+
+```
+wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -O /usr/bin/yt-dlp
+chmod a+rx /usr/bin/yt-dlp
+```
+```
+yt-dlp --version
+```
+## ffmpeg
+- https://github.com/yt-dlp/FFmpeg-Builds?tab=readme-ov-file#ffmpeg-static-auto-builds
+
+```
+wget https://github.com/yt-dlp/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz
+tar -xvf ffmpeg-master-latest-linux64-gpl.tar.xz
+```
+
 # Deno
 - https://docs.deno.com/runtime/
   - https://docs.deno.com/runtime/fundamentals/security/
