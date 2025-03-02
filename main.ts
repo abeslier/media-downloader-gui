@@ -1,10 +1,6 @@
-export function add(a: number, b: number): number {
-  return a + b;
-}
+import { download } from "./download.ts";
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
-}
+const ffmpegLocation = "ffmpeg-master-latest-linux64-gpl/bin/"
+const url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-console.log(Deno.args);
+download(ffmpegLocation, url);

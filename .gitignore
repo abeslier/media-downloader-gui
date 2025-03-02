@@ -1,2 +1,4 @@
 ffmpeg-master-latest-linux64-gpl.tar.xz
 ffmpeg-master-latest-linux64-gpl/
+*.webm
+*mp4
