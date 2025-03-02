@@ -1,6 +1,8 @@
 import { download } from "./download.ts";
 
-const ffmpegLocation = "ffmpeg-master-latest-linux64-gpl/bin/"
+const ffmpegLocationLinux = "ffmpeg-master-latest-linux64-gpl/bin/"
 const url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
-download(ffmpegLocation, url);
+await download(ffmpegLocationLinux, url);
+
+prompt("Press Enter to continue...");

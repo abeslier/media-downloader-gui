@@ -1,13 +1,17 @@
-export function download(ffmpegLocation: string, url: string) {
-    const command = new Deno.Command("yt-dlp", {  // subprocess
-        args: [
-            "--ffmpeg-location",
-            ffmpegLocation,
-            url,
-        ],
-        stdout: "piped",
-        stderr: "piped",
-    });
+import { isCommandOnPath } from "./subprocess.ts";
 
-    const process = command.spawn();
+export async function download(ffmpegLocation: string, url: string) {
+    if (await isCommandOnPath("yt-dlp")) {
+        const command = new Deno.Command("yt-dlp", {
+            args: [
+                "--ffmpeg-location",
+                ffmpegLocation,
+                url,
+            ],
+        });
+        
+        await command.output();
+    } else {
+        console.error("yt-dlp not on PATH");
+    }
 }
