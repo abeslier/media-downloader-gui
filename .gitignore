@@ -1,4 +1,13 @@
-ffmpeg-master-latest-linux64-gpl.tar.xz
-ffmpeg-master-latest-linux64-gpl/
+ffmpeg*
+
 *.webm
 *mp4
+
+media-downloader-gui
+.exe
+
+BACKUP.md
+TODO.md
+
+.vscode/
+deno.lock
