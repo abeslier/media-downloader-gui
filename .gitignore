@@ -8,6 +8,7 @@ media-downloader-gui
 
 BACKUP.md
 TODO.md
+NOTES.md
 
 .vscode/
 deno.lock
