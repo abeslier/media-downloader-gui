@@ -4,7 +4,7 @@ ffmpeg*
 *mp4
 
 media-downloader-gui
-.exe
+*.exe
 
 md/
 
