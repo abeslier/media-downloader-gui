@@ -1,8 +1,16 @@
 {
-  "tasks": {
-    "web": "deno --watch --allow-net --allow-read server.ts"
-  },
-  "imports": {
-    "@std/http": "jsr:@std/http@^1.0.13"
-  }
+    "tasks": {
+        "server": "deno --watch --allow-net --allow-read server.ts"
+    },
+    "imports": {
+        "@std/http": "jsr:@std/http@^1.0.13"
+    },
+    "fmt": {
+        "indentWidth": 4,
+        "lineWidth": 80,
+        "proseWrap": "always",
+        "semiColons": true,
+        "singleQuote": false,
+        "useTabs": false
+    }
 }

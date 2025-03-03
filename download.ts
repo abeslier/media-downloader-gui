@@ -9,7 +9,7 @@ export async function download(ffmpegLocation: string, url: string) {
                 url,
             ],
         });
-        
+
         await command.output();
     } else {
         console.error("yt-dlp not on PATH");

@@ -6,9 +6,7 @@ ffmpeg*
 media-downloader-gui
 .exe
 
-BACKUP.md
-TODO.md
-NOTES.md
+md/
 
 .vscode/
 deno.lock
