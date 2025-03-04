@@ -1,8 +1,8 @@
-export async function isCommandOnPath(name: string) {
+export async function isCommandOnPath(name: string): Promise<boolean> {
     try {
         await new Deno.Command(name).output();
         return true;
-    } catch (_error) {
+    } catch {
         return false;
     }
 }
