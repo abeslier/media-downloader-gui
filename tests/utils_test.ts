@@ -1,5 +1,13 @@
 import { assertEquals } from "@std/assert"; // deno add jsr:@std/assert
-import { extractPercentage } from "../src/utils.ts";
+import { extractPercentage, round } from "../src/utils.ts";
+
+Deno.test(function roundTest() {
+    assertEquals(round(1.2345), 1.23);
+    assertEquals(round(0), 0);
+    assertEquals(round(1.999), 2);
+    assertEquals(round(-1.234), -1.23);
+    assertEquals(round(0.005), 0.01);
+});
 
 Deno.test(function extractPercentageTest() {
     assertEquals(
