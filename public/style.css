@@ -1,3 +1,30 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --standard-gap: 0.65rem;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    gap: var(--standard-gap);
+}
+
+input[type="text"] {
+    width: 25vw;
+    height: 2rem;
+}
+
+button[type="button"] {
+    height: 2rem;
+}
+
 .error {
     border: 1px solid red;
 }
