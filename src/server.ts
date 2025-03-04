@@ -1,6 +1,12 @@
 import { serveDir } from "@std/http/file-server"; // `deno add jsr:@std/http`
 
 async function handler(req: Request): Promise<Response> {
+    const url = new URL(req.url);
+
+    if (url.pathname == "/api/download" && req.method == "POST") {
+        console.log(await req.json());
+        return new Response();
+    }
     return await serveDir(req, { // https://jsr.io/@std/http/doc/~/serveDir
         fsRoot: "public",
     });

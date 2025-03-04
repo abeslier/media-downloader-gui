@@ -1,6 +1,6 @@
 {
     "tasks": {
-        "server": "deno --watch --allow-net --allow-read ./src/server.ts"
+        "server": "deno --allow-all ./src/server.ts"
     },
     "imports": {
         "@std/assert": "jsr:@std/assert@^1.0.11",
