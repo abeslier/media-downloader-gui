@@ -1,7 +1,9 @@
 import { isCommandOnPath } from "./subprocess.ts";
 import { extractPercentage } from "./utils.ts";
 
-export async function download(ffmpegLocation: string, url: string) {
+const _alreadyDownloadedRE = /(^\[download\]).*(has already been downloaded$)/;
+
+export async function* download(ffmpegLocation: string, url: string) {
     if (await isCommandOnPath("yt-dlp")) {
         const command = new Deno.Command("yt-dlp", { // TODO try-catch
             args: [
@@ -19,9 +21,11 @@ export async function download(ffmpegLocation: string, url: string) {
         const decoder = new TextDecoder();
         while (true) {
             const { value, done } = await reader.read();
+            // TODO if already downloaded set progress to 100 and break
             const progress = extractPercentage(decoder.decode(value));
+            // TODO extract ETA, speed, size
             if (progress !== null) {
-                console.log(`${progress}`);
+                yield progress;
             }
             if (done) break;
         }
